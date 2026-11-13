@@ -1,0 +1,272 @@
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172b3a;
+  background: #f3f7fa;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.navbar {
+  height: 76px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #102b3f;
+  color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.brand-icon {
+  font-size: 27px;
+}
+
+.nav-label {
+  color: #b9d0dd;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.main {
+  width: min(720px, 92%);
+  margin: 55px auto;
+}
+
+.intro {
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: #087e8b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(32px, 5vw, 46px);
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+.subtitle {
+  max-width: 570px;
+  color: #627586;
+  line-height: 1.7;
+}
+
+.report-card {
+  padding: 32px;
+  display: grid;
+  gap: 22px;
+  background: white;
+  border: 1px solid #e0e9ee;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px #173b4b0c;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8eef2;
+}
+
+.card-heading h2 {
+  margin: 0 0 7px;
+  font-size: 22px;
+}
+
+.card-heading p,
+.required-note {
+  margin: 0;
+  color: #718393;
+  font-size: 13px;
+}
+
+.report-card label {
+  display: grid;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.report-card input,
+.report-card select,
+.report-card textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #d6e1e8;
+  border-radius: 9px;
+  outline: none;
+  background: white;
+  color: #172b3a;
+}
+
+.report-card input:focus,
+.report-card select:focus,
+.report-card textarea:focus {
+  border-color: #087e8b;
+  box-shadow: 0 0 0 3px #087e8b18;
+}
+
+.report-card textarea {
+  resize: vertical;
+}
+
+.hint {
+  color: #718393;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.report-card button {
+  padding: 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #087e8b;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.report-card button:hover {
+  background: #066873;
+}
+
+.report-card button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.message {
+  margin: 0;
+  padding: 13px;
+  border-radius: 8px;
+  background: #eaf6f1;
+  color: #176448;
+  overflow-wrap: anywhere;
+}
+
+.disclaimer {
+  margin: 0;
+  color: #718393;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 30px 0;
+  text-align: center;
+  color: #8193a1;
+  font-size: 12px;
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-label {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .main {
+    margin: 35px auto;
+  }
+
+  .report-card {
+    padding: 22px 18px;
+  }
+
+  .card-heading {
+    flex-direction: column;
+  }
+}
+
+
+.report-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.report-actions button {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.approve-button {
+  background: #e1f6eb;
+  color: #176448;
+  border: 1px solid #b5e5ce;
+}
+
+.reject-button {
+  background: #fde8e7;
+  color: #a52a2a;
+  border: 1px solid #f2c4c1;
+}
+
+.report-actions button:hover {
+  filter: brightness(0.96);
+}
+
+.report-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.report-filters input,
+.report-filters select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  color: #172033;
+  background: #fff;
+  border: 1px solid #d8e0eb;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.report-filters input:focus,
+.report-filters select:focus {
+  border-color: #2563eb;
+  outline: 3px solid #dbeafe;
+}
+
+@media (max-width: 600px) {
+  .report-filters {
+    grid-template-columns: 1fr;
+  }
+}
+
